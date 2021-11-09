@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+form input,form button{
+    padding: 0.5rem;
+    margin: 5px;
+}
+form button{
+    cursor: pointer;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+.todo{
+    margin: 7px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    font-size: 20px;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.verifie-btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.save-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.suppr-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.suppr-btn,.suppr-btn,.save-btn{
+    pointer-events: none;
+}
+
+.do,.toDo,.all{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+.clearBtn{
+    padding: 10px 200px ;
+}
