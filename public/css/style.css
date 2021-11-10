@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+body{
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    background-size: 100vh;
+}
 
 
 
@@ -23,7 +27,7 @@ form button{
     min-width: 30%;
 }
 .todo{
-    margin: 7px;
+    margin: 10px;
     background-color: white;
     color: black;
     display: flex;
@@ -32,8 +36,10 @@ form button{
     font-size: 20px;
 }
 
+
 .todo li{
     flex: 1;
+   
 }
 
 .verifie-btn{
@@ -41,7 +47,7 @@ form button{
     color: white;
     border: none;
     padding: 5px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .save-btn{
@@ -61,14 +67,22 @@ form button{
 }
 
 .todo-item{
+
     padding: 0rem 0.5rem;
     align-items: flex-start;
     justify-content: flex-start;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+  
+
+  
 }
 
-.suppr-btn,.suppr-btn,.save-btn{
+/* .suppr-btn,.verifie-btn{
     pointer-events: none;
-}
+} */
 
 .do,.toDo,.all{
     padding: 5px 20px;
@@ -78,4 +92,15 @@ form button{
 }
 .clearBtn{
     padding: 10px 200px ;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+}
+.bg-white{
+    background-color: white;
 }
