@@ -2,6 +2,7 @@
 
 
 // selecteurs
+
 let formulaire = document.querySelector("form");
 console.log(formulaire);
 let todoInput = document.querySelector(".todo-input");
@@ -23,21 +24,9 @@ console.log(buttonClear);
 // ecouteurs evenement
 // todoList.addEventListener("click",deleteCheck);
 
-// formulaires
-
-// formulaire.addEventListener("submit",(e)=>{
-//     const taches = input.value
-//     if (!taches) {
-//         alert('entrez une tache');
-//         return;
-
-        
-//     }
-// })
 
 
 
-// les input
 todoButton.addEventListener("click", (e) => {
     e.preventDefault();
     let todoDiv = document.createElement("div");
@@ -47,7 +36,7 @@ todoButton.addEventListener("click", (e) => {
     let newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value;
     newTodo.classList.add("todo-item");
-    
+
     // button check
     let completButton = document.createElement("button");
 
@@ -56,7 +45,8 @@ todoButton.addEventListener("click", (e) => {
     completButton.classList.add("verifie-btn");
     newTodo.appendChild(completButton);
     completButton.addEventListener('click', () => {
-        newTodo.style.backgroundColor ="blue"
+        // newTodo.style.backgroundColor ="blue"
+        newTodo.classList.add("bg-blue");
         newTodo.classList.toggle("bg-white")
     })
     // completButton.addEventListener("dblclick",()=>{
@@ -69,55 +59,63 @@ todoButton.addEventListener("click", (e) => {
     saveButton.innerHTML = `<i class="fas fa-save"></i>`
     saveButton.classList.add("save-btn");
     newTodo.appendChild(saveButton);
-    saveButton.addEventListener('click' , () => {
+    saveButton.addEventListener('click', () => {
 
-        
-        
+
+
     })
     // button supprimer
     let supprButton = document.createElement("button");
     supprButton.innerHTML = `<i class="far fa-trash-alt"></i>`
     supprButton.classList.add("suppr-btn");
-    supprButton.addEventListener('click',()=>{
+    supprButton.addEventListener('click', () => {
         ulButton.removeChild(newTodo);
-        
 
-       
+
+
     });
     newTodo.appendChild(supprButton);
     todoList.appendChild(newTodo);
-    
-   
+
+
 
     todoInput.value = "";
 
     // les 3 boutons filtrer
 
-     doButton.addEventListener("click",()=>{
-         let newtodoBlue = newTodo.style.backgroundColor="blue"
-        if (newTodo ==  newtodoBlue ) {
-            console.log("okey");
+    doButton.addEventListener("click", () => {
+        newTodo.classList.contains("bg-blue")
+        if (newTodo == "bg-blue") {
             
+
+
+
         }
-     })
-     myButton.addEventListener("click",()=>{
-         
-     })
 
 
-     let divClear = document.querySelector(".clearRouge");
+    })
+
+
+    myButton.addEventListener("click", () => {
+        newTodo.classList.toggle("bg-white");
+
+
+
+    })
+
+
+
+
+
+    let divClear = document.querySelector(".clearRouge");
 
     //  button clear
-    buttonClear.addEventListener("click",()=>{
+    buttonClear.addEventListener("click", () => {
         divClear.removeChild(todoList);
-        
+
 
     })
 
 
 
 })
-
-
-
-
