@@ -1,4 +1,4 @@
-// import { deleteCheck } from "./modules/delete.js";
+import { input } from "./modules/delete.js";
 
 
 // selecteurs
@@ -11,8 +11,6 @@ let todoButton = document.querySelector(".todo-button");
 console.log(todoButton);
 let todoList = document.querySelector(".todo-list");
 console.log(todoList);
-let ulButton = document.querySelector(".todo-list");
-console.log(ulButton);
 let doButton = document.querySelector(".do");
 console.log(doButton);
 let myButton = document.querySelector(".toDo");
@@ -21,101 +19,150 @@ let buttonAll = document.querySelector(".all");
 console.log(buttonAll);
 let buttonClear = document.querySelector(".clearBtn");
 console.log(buttonClear);
+let troisbutton = document.querySelector(".button-list");
+console.log(troisbutton);
+
+
 // ecouteurs evenement
-// todoList.addEventListener("click",deleteCheck);
+
+input();
+
+
+// todoButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     let todoDiv = document.createElement("div");
+//     console.log(todoDiv);
+//     todoDiv.classList.add("todo");
+//     const demande = todoInput.value;
+//     if (!demande) {
+//         alert("entrez une tache");
+//         return
+
+//     }
+
+
+//     // création de mes input
+
+
+    // let input = document.createElement("input");
+    // console.log(input);
+    // input.classList.add("text1");
+    // input.type = "text"
+    // input.innerText = todoInput.value
+    // input.value = todoInput.value
+    // input.setAttribute("text", "value")
+    // todoDiv.appendChild(input)
+
+//     // button check
+//     let completButton = document.createElement("button");
+
+
+//     completButton.innerHTML = `<i class="fas fa-check"></i>`
+
+//     completButton.classList.add("verifie-btn");
+//     todoDiv.appendChild(completButton);
+
+//     completButton.addEventListener('click', () => {
+//         input.classList.add("bg-blue");
+//         input.classList.toggle("bg-white")
+//     })
+
+//     console.log(completButton);
+
+//     // button save
+
+//     let saveButton = document.createElement("button");
+//     saveButton.innerHTML = `<i class="fas fa-save"></i>`
+//     saveButton.classList.add("save-btn");
+//     todoDiv.appendChild(saveButton);
+
+//     const buttEdit = document.createElement("button");
+//     console.log(buttEdit);
+//     buttEdit.classList.add("edit");
+//     buttEdit.innerHTML = "edit"
+
+//     saveButton.addEventListener('dblclick', () => {
+
+//         if (input.innerText.toLowerCase() == `Edit`) {
+//             input.removeAttribute("text");
+//             input.focus();
+//             input.innerText = "save";
+
+
+//         } else {
+//             input.setAttribute("text", "value");
+//             input.innerText = "Edit"
+//         }
+//         todoDiv.append(input);
+
+//     })
+//     saveButton.addEventListener("click", () => {
+
+//         if (buttEdit.innerText.toLowerCase() == `Edit`) {
+//             input.removeAttribute("text")
+//             input.focus();
+//             input.innerText = "save";
+
+
+//         } else {
+//             input.setAttribute("text", "value");
+//             saveButton.innerText = "Edit"
+
+//         }
+//     })
 
 
 
+//     // button supprimer
+//     let supprButton = document.createElement("button");
+//     supprButton.innerHTML = `<i class="far fa-trash-alt"></i>`
+//     supprButton.classList.add("suppr-btn");
+//     supprButton.addEventListener('click', () => {
+//         todoList.removeChild(todoDiv);
 
-todoButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    let todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo");
+//     });
 
-    // creer mes LI
-    let newTodo = document.createElement("li");
-    newTodo.innerText = todoInput.value;
-    newTodo.classList.add("todo-item");
+//     todoDiv.appendChild(supprButton);
+//     todoList.appendChild(todoDiv);
+//     todoInput.value = "";
 
-    // button check
-    let completButton = document.createElement("button");
+//     //  button clear
+//     let divClear = document.querySelector(".clearRouge");
+//     console.log(divClear);
 
-    completButton.innerHTML = `<i class="fas fa-check"></i>`
-
-    completButton.classList.add("verifie-btn");
-    newTodo.appendChild(completButton);
-    completButton.addEventListener('click', () => {
-        // newTodo.style.backgroundColor ="blue"
-        newTodo.classList.add("bg-blue");
-        newTodo.classList.toggle("bg-white")
-    })
-    // completButton.addEventListener("dblclick",()=>{
-    //     newTodo.style.backgroundColor =""
-    // })
-    console.log(completButton);
-
-    // button save
-    let saveButton = document.createElement("button");
-    saveButton.innerHTML = `<i class="fas fa-save"></i>`
-    saveButton.classList.add("save-btn");
-    newTodo.appendChild(saveButton);
-    saveButton.addEventListener('click', () => {
+//     buttonClear.addEventListener("click", () => {
+//         divClear.removeChild(todoList);
 
 
+//     })
 
-    })
-    // button supprimer
-    let supprButton = document.createElement("button");
-    supprButton.innerHTML = `<i class="far fa-trash-alt"></i>`
-    supprButton.classList.add("suppr-btn");
-    supprButton.addEventListener('click', () => {
-        ulButton.removeChild(newTodo);
-
-
-
-    });
-    newTodo.appendChild(supprButton);
-    todoList.appendChild(newTodo);
-
-
-
-    todoInput.value = "";
 
     // les 3 boutons filtrer
 
-    doButton.addEventListener("click", () => {
-        newTodo.classList.contains("bg-blue")
-        if (newTodo == "bg-blue") {
-            
 
+//     doButton.addEventListener("click", () => {
 
+//         if (input.classList.contains("bg-blue") != true) {
+//             input.style.display = "none"
 
-        }
+//         }
 
+//     })
 
-    })
+//     myButton.addEventListener("click", () => {
 
+//         if (input.classList.contains("bg-blue") == true) {
+//             input.style.display = "none"
 
-    myButton.addEventListener("click", () => {
-        newTodo.classList.toggle("bg-white");
+//         }
 
+//     })
 
+//     buttonAll.addEventListener("click", () => {
 
-    })
+//         input.style.display = "flex"
 
+//     })
+//     todoDiv.appendChild(input);
 
-
-
-
-    let divClear = document.querySelector(".clearRouge");
-
-    //  button clear
-    buttonClear.addEventListener("click", () => {
-        divClear.removeChild(todoList);
-
-
-    })
-
-
-
-})
+// })
